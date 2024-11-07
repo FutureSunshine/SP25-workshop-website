@@ -253,6 +253,24 @@ header {
     margin-bottom: 0.4em; /* Increase spacing between paragraphs */
 }
 
+/* Coming Soon Style */
+.coming-soon {
+    font-size: 3.5em; /* Large font for emphasis */
+    font-weight: bold; /* Bolder font for visibility */
+    color: rgba(75, 28, 109, 0.6); /* Medium-opacity purple color for balance */
+    text-align: center;
+    margin-top: 150px;
+    font-style: italic; /* Italic style for anticipation */
+    letter-spacing: 2px; /* Increase spacing for an airy feel */
+    animation: slowFade 5s ease-in-out infinite; /* Slow continuous fade animation */
+}
+
+/* Slow fade-in/out animation with extended clarity */
+@keyframes slowFade {
+    0%, 100% { opacity: 0.3; } /* Minimum opacity */
+    40%, 60% { opacity: 0.8; } /* Maximum opacity, extended time at max clarity */
+}
+
 /* Footer */
 footer {
     background-color: #e0d4ff;

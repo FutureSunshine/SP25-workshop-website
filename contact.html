@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - S&P25 Workshops</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="image/icon.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="image/logo.png" alt="S&P25 Workshops Logo" width="60" height="60">
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#">Workshop</a>
+                    <ul class="dropdown">
+                        <li><a href="organizers.html">Organizers</a></li>
+                        <li><a href="keynotes.html">Keynote Speakers</a></li>
+                        <li><a href="program.html">Program</a></li>
+                        <li><a href="sponsorship.html">Sponsorship Opportunities</a></li>
+                        <li><a href="social.html">Social Events</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Submission</a>
+                    <ul class="dropdown">
+                        <li><a href="call-for-papers.html">Call for Papers</a></li>
+                        <li><a href="submission-guidelines.html">Submission Guidelines</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <section class="content-section">
+        <h2 class="section-title">Contact</h2>
+        <div class="coming-soon">
+            Coming Soon ...
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 IEEE S&P25 Workshops. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Delayed Dropdown Menu -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const menuItems = document.querySelectorAll(".menu > li");
+
+        menuItems.forEach(item => {
+            let timeout;
+
+            item.addEventListener("mouseenter", () => {
+                clearTimeout(timeout);
+                const dropdown = item.querySelector(".dropdown");
+                if (dropdown) {
+                    dropdown.style.display = "block";
+                }
+            });
+
+            item.addEventListener("mouseleave", () => {
+                const dropdown = item.querySelector(".dropdown");
+                if (dropdown) {
+                    timeout = setTimeout(() => {
+                        dropdown.style.display = "none";
+                    }, 300); // Delay of 300ms before hiding
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>
