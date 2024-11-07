@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S&P25 Workshops</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="image/icon.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="image/logo.png" alt="S&P25 Workshops Logo" width="60" height="60">
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#">Workshop</a>
+                    <ul class="dropdown">
+                        <li><a href="organizers.html">Organizers</a></li>
+                        <li><a href="keynotes.html">Keynote Speakers</a></li>
+                        <li><a href="program.html">Program</a></li>
+                        <li><a href="sponsorship.html">Sponsorship Opportunities</a></li>
+                        <li><a href="social.html">Social Events</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Submission</a>
+                    <ul class="dropdown">
+                        <li><a href="call-for-papers.html">Call for Papers</a></li>
+                        <li><a href="submission-guidelines.html">Submission Guidelines</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Image -->
+    <section class="hero">
+        <img src="image/view.jpg" alt="San Francisco Landscape" class="hero-img">
+        <div class="floating-card" id="floating-card">
+            <h1>The 1st Human-Machine Intelligence for Security Analytics (HMI-SA)</h1>
+            <p>(Collocated with IEEE S&P 2025)</p>
+            <p>15 May, 2025</p>
+            <p>@ Hyatt Regency San Francisco</p>
+        </div>
+    </section>
+
+    <!-- Welcome Section with Styled Text -->
+    <section id="welcome" class="content-section">
+        <h2 class="section-title">Welcome to the S&P25 Workshops</h2>
+        <p class="section-description">We are thrilled to welcome you to the S&P25 Workshops in San Francisco. This event is a gathering of industry leaders, researchers, and professionals to discuss cutting-edge advancements in security and privacy. Join us for insightful sessions, networking opportunities, and to expand your knowledge in the fast-evolving field of digital security.</p>
+    </section>
+
+    <!-- Important Dates Section -->
+    <section id="important-dates" class="content-section">
+        <h2 class="section-title">Important Dates</h2>
+        <ul class="styled-list">
+            <li>Call for Proposals: 1 Nov 2024</li>
+            <li>Paper Submissions Due: 31 Jan 2025</li>
+            <li>Acceptance Notice to Authors: 20 Feb 2025</li>
+            <li>Publication-ready Papers Submitted: 1 Mar 2025</li>
+        </ul>
+    </section>
+
+    <!-- Flyer Download Section with Thumbnail -->
+    <section id="flyer" class="content-section flyer-section">
+        <h2 class="section-title">Workshop Flyer</h2>
+        <a href="image/flyer.pdf" target="_blank" download="S&P25_Workshops_Flyer.pdf">
+            <img src="image/flyer.jpg" alt="Workshop Flyer Thumbnail" class="flyer-thumbnail">
+        </a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 IEEE S&P25 Workshops. All Rights Reserved.</p>
+    </footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const card = document.getElementById("floating-card");
+        
+        // Play animation once on page load
+        card.classList.add("float-once");
+        
+        // Remove animation class after it finishes so it doesn't loop
+        card.addEventListener("animationend", () => {
+            card.classList.remove("float-once");
+        });
+
+        // Add hover event to trigger animation again when mouse enters
+        card.addEventListener("mouseenter", () => {
+            card.classList.add("float-once");
+        });
+    });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const menuItems = document.querySelectorAll(".menu > li");
+
+    menuItems.forEach(item => {
+        let timeout;
+
+        item.addEventListener("mouseenter", () => {
+            clearTimeout(timeout);
+            const dropdown = item.querySelector(".dropdown");
+            if (dropdown) {
+                dropdown.style.display = "block";
+            }
+        });
+
+        item.addEventListener("mouseleave", () => {
+            const dropdown = item.querySelector(".dropdown");
+            if (dropdown) {
+                timeout = setTimeout(() => {
+                    dropdown.style.display = "none";
+                }, 300); // 延迟300毫秒再隐藏
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call for papers - S&P25 Workshops</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="image/icon.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="image/logo.png" alt="S&P25 Workshops Logo" width="60" height="60">
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#">Workshop</a>
+                    <ul class="dropdown">
+                        <li><a href="organizers.html">Organizers</a></li>
+                        <li><a href="keynotes.html">Keynote Speakers</a></li>
+                        <li><a href="program.html">Program</a></li>
+                        <li><a href="sponsorship.html">Sponsorship Opportunities</a></li>
+                        <li><a href="social.html">Social Events</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Submission</a>
+                    <ul class="dropdown">
+                        <li><a href="call-for-papers.html">Call for Papers</a></li>
+                        <li><a href="submission-guidelines.html">Submission Guidelines</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Important Dates Section with Gradient Card -->
+    <section class="content-section gradient-card small-text">
+        <h2 class="section-title">Important Dates</h2>
+        <ul class="styled-list small-text">
+            <li>Call for Proposals: 1 Nov 2024</li>
+            <li>Paper Submissions Due: 31 Jan 2025</li>
+            <li>Acceptance Notice to Authors: 20 Feb 2025</li>
+            <li>Publication-ready Papers Submitted: 1 Mar 2025</li>
+        </ul>
+    </section>
+
+    <!-- Workshop Focus Section with Gradient Card -->
+    <section class="content-section gradient-card small-text">
+        <h2 class="section-title">Workshop Focus</h2>
+        <p class="section-description small-text">
+            This workshop focuses on the pivotal role of human expertise and its integration with machine intelligence to enhance security analytics in an era of evolving cyber threats. It seeks to explore the synergy between machine intelligence technologies and human intuition within the security domain. The event is tailored to highlight the collaborative efforts between humans and machines, emphasizing the unique contributions of human judgment in conjunction with artificial intelligence-driven insights for cybersecurity. Key areas of discussion will include the development and application of collaborative systems for threat detection and response, the indispensable role of human interpretation in leveraging machine-generated data, and real-world case studies demonstrating successful human-machine integration in security operations.
+        </p>
+    </section>
+
+    <!-- Themes of Interest Section with Gradient Card and Styled List -->
+    <section class="content-section gradient-card small-text">
+        <h2 class="section-title">Themes of Interest</h2>
+        <ul class="styled-list small-text">
+            <li><strong>Human-Centric Design in Security Analytics:</strong>
+                <ul>
+                    <li>User-centric metrics for Engagement, Satisfaction, Confidence, and Trust in human-machine collaboration.</li>
+                    <li>Human factors impacting efficiency, effectiveness, and trustworthiness in security analysis.</li>
+                    <li>Human-Computer Interaction (HCI) for security analysis.</li>
+                </ul>
+            </li>
+            <li><strong>Collaborative Security Analytics:</strong>
+                <ul>
+                    <li>Cognitive models for enhanced human-machine collaboration.</li>
+                    <li>Formal methods for verifying consistency and correctness in human-machine collaboration.</li>
+                    <li>(Semi-)Automated analytics for critical decision-making harnessing collective human and machine knowledge.</li>
+                    <li>Explainable AI to bridge the gap between human understanding and machine decision-making.</li>
+                    <li>Human-in-loop security analysis in the era of large language models.</li>
+                </ul>
+            </li>
+            <li><strong>Ethical and Social Considerations:</strong>
+                <ul>
+                    <li>Ethical deployment of human-machine intelligence system in security analytics.</li>
+                    <li>Social implications and acceptance.</li>
+                </ul>
+            </li>
+            <li><strong>Sustainable Human-Machine Intelligence for Cybersecurity:</strong>
+                <ul>
+                    <li>Long-term feedback mechanisms for continuous improvement.</li>
+                    <li>Continuous knowledge adaptation to relevant emerging threats.</li>
+                    <li>User-centric security awareness training initiatives.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Tasks of Interest Section with Gradient Card -->
+    <section class="content-section gradient-card small-text">
+        <h2 class="section-title">Tasks of Interest</h2>
+        <ul class="styled-list small-text">
+            <li>Malware Detection</li>
+            <li>Vulnerability Detection and Assessment</li>
+            <li>Intrusion Detection</li>
+            <li>Anomaly Detection</li>
+            <li>Cyber Threat Intelligence Detection and Modeling</li>
+            <li>Threat Analysis on AI-Generated Contents (Disinformation, Adversarial Attack)</li>
+            <li>Biometric Security and User Authentication Analysis</li>
+        </ul>
+    </section>   
+
+    <footer>
+        <p>&copy; 2024 IEEE S&P25 Workshops. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const menuItems = document.querySelectorAll(".menu > li");
+
+    menuItems.forEach(item => {
+        let timeout;
+
+        item.addEventListener("mouseenter", () => {
+            clearTimeout(timeout);
+            const dropdown = item.querySelector(".dropdown");
+            if (dropdown) {
+                dropdown.style.display = "block";
+            }
+        });
+
+        item.addEventListener("mouseleave", () => {
+            const dropdown = item.querySelector(".dropdown");
+            if (dropdown) {
+                timeout = setTimeout(() => {
+                    dropdown.style.display = "none";
+                }, 300);
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>
